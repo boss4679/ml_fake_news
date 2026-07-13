@@ -1,0 +1,24 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+*.egg-info/
+
+# OS / download artifacts
+.DS_Store
+*:Zone.Identifier
+
+# Trained model artifacts (regenerate with `python -m src.train`)
+models/*.joblib
+
+# Generated browser model (regenerate with `python -m src.export_model`)
+extension/model.json
+
+# Parity-test fixture (regenerate with `python -m tests.gen_expected`)
+tests/expected.json
+
+# Large datasets (download separately — see README)
+data/True.csv
+data/Fake.csv
+data/news.csv

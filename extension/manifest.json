@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "News Reliability Classifier",
+  "version": "1.0.0",
+  "description": "Flags news articles as Reliable or Unreliable as you browse, using an in-browser TF-IDF + logistic regression model. No server; nothing leaves your browser.",
+  "permissions": ["storage"],
+  "action": {
+    "default_title": "News Reliability Classifier",
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "js": ["vendor/Readability.js", "content.js"],
+      "run_at": "document_idle",
+      "all_frames": false
+    }
+  ]
+}

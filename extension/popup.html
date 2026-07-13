@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <style>
+    :root { color-scheme: light dark; }
+    body { font-family: system-ui, sans-serif; width: 300px; margin: 0; padding: 16px; }
+    h1 { font-size: 14px; margin: 0 0 12px; opacity: 0.8; font-weight: 600; }
+    .verdict { font-size: 20px; font-weight: 700; margin-bottom: 4px; }
+    .Reliable { color: #2e8b57; }
+    .Unreliable { color: #c0392b; }
+    .conf { font-size: 13px; opacity: 0.8; }
+    .bar { height: 8px; border-radius: 4px; background: #8883; margin: 10px 0; overflow: hidden; }
+    .bar > span { display: block; height: 100%; }
+    .meta { font-size: 11px; opacity: 0.6; margin-top: 10px; word-break: break-all; }
+    .note { font-size: 10px; opacity: 0.55; margin-top: 12px; line-height: 1.4;
+            border-top: 1px solid #8883; padding-top: 8px; }
+    .empty { font-size: 13px; opacity: 0.7; }
+  </style>
+</head>
+<body>
+  <h1>📰 News Reliability</h1>
+  <div id="content"><div class="empty">Analyzing…</div></div>
+  <div class="note">
+    Heuristic based on writing style (TF-IDF + logistic regression), not a
+    fact-check. Runs entirely in your browser.
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
